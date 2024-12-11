@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 
 
-image = Image.open('db.png')
+image = Image.open('img/db.png')
 st.set_page_config(initial_sidebar_state="collapsed", page_icon=image)
 
 pages = ['Home','Project1', 'Project2', 'Project3']
