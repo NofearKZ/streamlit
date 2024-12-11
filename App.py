@@ -1,11 +1,15 @@
 import streamlit as st
 from Pages import Home, Project1, Project2, Project3
 from streamlit_navigation_bar import st_navbar as navbar
+import os
 from PIL import Image
 import pandas as pd
 import numpy as np
 
-image = Image.open('img/db.png')
+file_path = os.path.join(os.getcwd(), 'img/db.png')
+print(file_path)
+
+image = Image.open(file_path)
 st.set_page_config(initial_sidebar_state="collapsed", page_icon=image)
 
 pages = ['Home','Project1', 'Project2', 'Project3']
