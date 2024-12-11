@@ -12,7 +12,7 @@ st.set_page_config(initial_sidebar_state="collapsed", page_icon=image)
 pages = ['Home','Project1', 'Project2', 'Project3']
 styles = {
     "nav":{
-        "background-color": "white",
+        "background-color": "yellow",
         "display": "flex",
         "justify-content": "center",
     },
@@ -29,9 +29,7 @@ styles = {
      },
     "span": {
         "display": "block",
-        "border-radius": "0.5rem",
         "color": "rgb(49, 51, 63)",
-        "margin": "0 0.125rem",
         "padding": "0.4375rem 0.625rem",
         "font-size": "14px",
     },
