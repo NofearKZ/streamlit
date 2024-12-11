@@ -8,12 +8,10 @@ import numpy as np
 
 file_path = os.path.join(os.getcwd(), 'img/db.png')
 print(file_path)
-
 image = Image.open(file_path)
 st.set_page_config(initial_sidebar_state="collapsed", page_icon=image)
 
 pages = ['Home','Project1', 'Project2', 'Project3']
-
 styles = {
     "nav":{
         "background-color": "rgb(247, 215, 7)",
