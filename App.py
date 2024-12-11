@@ -5,7 +5,7 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
-image = Image.open('img/dragon-ball.svg')
+image = Image.open('img/dragon-ball.png')
 st.set_page_config(initial_sidebar_state="collapsed", page_icon=image)
 
 pages = ['Home','Project1', 'Project2', 'Project3']
