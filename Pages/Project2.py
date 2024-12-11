@@ -3,6 +3,8 @@ import cv2
 import tempfile
 import numpy as np
 from pathlib import Path
+
+from Tools.scripts.make_ctype import flags
 from yt_dlp import YoutubeDL
 from streamlit_webrtc import webrtc_streamer, WebRtcMode
 
@@ -61,7 +63,7 @@ class Project2:
 
         if source_option == "Mobile camera" and img_file is not None:
             file_bytes = np.asarray(bytearray(img_file.read()), dtype=np.uint8)
-            frame - cv2.imdecode(file_bytes, (flags:1))
+            frame - cv2.imdecode(file_bytes, flags=1 )
             st.image(frame, channels="BGR")
 
         elif run_button and video_url is not None and source_option in ["Local Drive", "RTSP"]:
