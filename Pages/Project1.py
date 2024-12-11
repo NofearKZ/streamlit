@@ -19,6 +19,20 @@ class Project1:
             df = load_data(upload)
             st.dataframe(df, height=400, width=600)
 
+            column = st.selectbox("Choose column for filter", df.columns)
+
+            if column:
+
+                unique_values = df[column].unique()
+                selected_values = st.multiselect(f"Select values for {column}", options=unique_values,
+                                    default=unique_values)
+
+                filtered_df = df[df[column].isin(selected_values)]
+
+                st.dataframe(filtered_df, height=400, width=600)
+        else:
+            st.warning ("Please upload a CSV file")
+
             stress_levels = df['Stress_Level'].unique()
             selected_levels = st.multiselect("Select Stress Level(s)", options=stress_levels, default=stress_levels)
 
