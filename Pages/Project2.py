@@ -90,4 +90,4 @@ class Project2:
                 cv2.destroyAllWindows()
 
 app = Project2()
-app.app()
+app.App()
