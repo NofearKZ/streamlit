@@ -14,7 +14,7 @@ class Project1:
                 return data
             return None
 
-        upload = st.file_uploader("Choose your csv file")
+        upload = st.file_uploader("сhoose csv file")
         if upload is not None:
             df = load_data(upload)
             st.dataframe(df, height=400, width=600)
@@ -27,6 +27,7 @@ class Project1:
             st.dataframe(filtered_df, height=400, width=600)
         else:
             st.warning("Please upload a CSV file")
+
 
         st.markdown("""<style>
             h1 {
