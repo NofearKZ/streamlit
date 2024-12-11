@@ -24,9 +24,6 @@ styles = {
         "width": "100px",
         "height": "40px",
     },
-    "div": {
-    "max-width": "32rem",
-     },
     "span": {
         "display": "block",
         "color": "rgb(49, 51, 63)",
@@ -39,10 +36,6 @@ styles = {
         "font-weight": "normal",
         "padding": "14px",
     },
-    "hover": {
-        "background-color": "rgba(255, 255, 255, 0.35)",
-    }
-
 }
 
 page = navbar(pages, styles=styles)
