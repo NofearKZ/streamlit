@@ -55,13 +55,13 @@ class Project2:
             if rtsp_url:
                 video_url = rtsp_url
 
-        run_button - st.button("Run")
-        frame_place - st.empty()
+        run_button = st.button("Run")
+        frame_place = st.empty()
 
 
         if source_option == "Mobile camera" and img_file is not None:
             file_bytes = np.asarray(bytearray(img_file.read()), dtype=np.uint8)
-            frame - cv2.imdecode(file_bytes, flags=1)
+            frame = cv2.imdecode(file_bytes, flags=1)
             st.image(frame, channels="BGR")
 
         elif run_button and video_url is not None and source_option in ["Local Drive", "RTSP"]:
@@ -89,5 +89,3 @@ class Project2:
                 self.cap.release()
                 cv2.destroyAllWindows()
 
-app = Project2()
-app.App()
